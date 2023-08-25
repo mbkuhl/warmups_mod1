@@ -8,4 +8,11 @@ RSpec.describe 'August 25th Warmup' do
     every_other_capital = every_other_capital(string)
     expect(every_other_capital).to eq("The quick Brown fox Jumps over The lazy Dog.")
   end
+
+  it 'can handle random capitalizeation and special chars' do
+    string = "ThE quiCk br0Wn fox jumps 0ver the l@zy dog."
+
+    every_other_capital = every_other_capital(string)
+    expect(every_other_capital).to eq("ThE quiCk Br0Wn fox Jumps 0ver The l@zy Dog.")
+  end
 end
